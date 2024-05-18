@@ -11,7 +11,7 @@ def blog_view(request):
     
 
 def blog_single_view(request, pid):
-    post = get_object_or_404(Post, id=pid)
+    post = get_object_or_404(Post, id=pid, status=1)
     context = {
         'post':post 
     }
