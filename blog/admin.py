@@ -9,4 +9,8 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ['title','author' , 'status', 'counted_view', 'published_date', 'created_date']
     list_filter = ['status']
     search_fields = ['title', 'content']
-# admin.site.register(models.Post, PostAdmin)
+
+
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    pass
